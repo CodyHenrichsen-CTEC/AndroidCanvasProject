@@ -13,12 +13,33 @@ import android.widget.ImageView;
 
 public class AnimationView extends ImageView
 {
+	/**
+	 * Allows for access to the application resources.
+	 */
 	private Context currentContext;
+	/**
+	 * Used for the repeated execution of the code, specifically to invalidate the view.
+	 */
 	private Runnable canvasRunnable;
+	/**
+	 * Drawable image that can move within the Canvas.
+	 */
 	private BitmapDrawable yesAndroid;
+	/**
+	 * Drawable image that can move within the Canvas.
+	 */
 	private BitmapDrawable noAndroid;
-	private Handler canvasHandler;
+	/**
+	 * Used to manage the runnable that provides for the invalidation.
+	 */
+	private Handler canvasHandler;  
+	/**
+	 * How often in milliseconds that are between the redraws of the View.
+	 */
 	private final int FRAME_RATE = 30;
+	/**
+	 * Starting background color for the View.
+	 */
 	private int backgroundColor = Color.GREEN;
 	/**
 	 * Position variables for the images.
@@ -140,7 +161,7 @@ public class AnimationView extends ImageView
 			if ((yesY > this.getHeight() - yesAndroid.getBitmap().getHeight()) || (yesY < 0))
 			{
 				yesYVelocity *= -1;
-//				changeBackgroundColor();
+				changeBackgroundColor();
 			}
 		}
 	}
@@ -164,7 +185,7 @@ public class AnimationView extends ImageView
 			if ((noX > this.getWidth() - noAndroid.getBitmap().getWidth()) || (noX < 0))
 			{
 				noXVelocity *= -1;
-//				changeBackgroundColor();
+			changeBackgroundColor();
 			}
 
 			if ((noY > this.getHeight() - noAndroid.getBitmap().getHeight()) || (noY < 0))
