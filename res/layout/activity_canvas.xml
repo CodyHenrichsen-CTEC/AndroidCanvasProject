@@ -6,7 +6,7 @@
     tools:context="ctec.canvasproject.activities.CanvasActivity"
     tools:ignore="MergeRootFrame" >
 
-    <ctec.samplecanvasprojectsapp.view.CanvasView
+    <ctec.canvasproject.view.CanvasView
         android:id="@+id/canvasView"
         android:layout_width="400dp"
         android:layout_height="400dp"
