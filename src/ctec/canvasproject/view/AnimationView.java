@@ -8,9 +8,10 @@ import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Handler;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.widget.ImageView;
 
-public class CanvasView extends ImageView
+public class AnimationView extends ImageView
 {
 	private Context currentContext;
 	private Runnable canvasRunnable;
@@ -33,7 +34,7 @@ public class CanvasView extends ImageView
 	 * @param context
 	 * @param attrs
 	 */
-	public CanvasView(Context context, AttributeSet attrs)
+	public AnimationView(Context context, AttributeSet attrs)
 	{
 		super(context, attrs);
 		currentContext = context;
@@ -102,7 +103,7 @@ public class CanvasView extends ImageView
 		canvasHandler.postDelayed(canvasRunnable, FRAME_RATE);
 
 	}
-	
+
 	/**
 	 * Creates a new random background color for the canvas.
 	 */
@@ -139,7 +140,7 @@ public class CanvasView extends ImageView
 			if ((yesY > this.getHeight() - yesAndroid.getBitmap().getHeight()) || (yesY < 0))
 			{
 				yesYVelocity *= -1;
-				changeBackgroundColor();
+//				changeBackgroundColor();
 			}
 		}
 	}
@@ -163,7 +164,7 @@ public class CanvasView extends ImageView
 			if ((noX > this.getWidth() - noAndroid.getBitmap().getWidth()) || (noX < 0))
 			{
 				noXVelocity *= -1;
-				changeBackgroundColor();
+//				changeBackgroundColor();
 			}
 
 			if ((noY > this.getHeight() - noAndroid.getBitmap().getHeight()) || (noY < 0))
