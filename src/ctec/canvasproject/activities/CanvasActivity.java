@@ -11,7 +11,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
-
+/**
+ * 
+ * @author cody.henrichsen
+ *
+ */
 public class CanvasActivity extends ActionBarActivity
 {
 
